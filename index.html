@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Registration form</title>
+</head>
+<body>
+    <main>
+        <section class="wrapper-form">
+            <div class="main-label-container">
+                <h1 class="main-label">Register</h1>
+            </div>
+            <p class="main-text">Create your account. It's free and only takes a minute.</p>
+
+            <form action="" method="get" class="register-form">
+                <section class="main-input-container">
+                    <input type="text" name="name" class="main-input main-top" placeholder="First Name" required>
+                    <input type="text" name="surname" class="main-input main-top" placeholder="Last Name" required>
+                </section>
+                <input type="email" name="email" class="main-input main-top" placeholder="Email" required>
+                <input type="password" name="password" class="main-input main-top" placeholder="Password" required>
+                <input type="password" class="main-input main-top" placeholder="Confirm Password" required>
+                <label>
+                    <input type="checkbox" name="accept" class="main-top" value="trueAccept">
+                    I accept the <a href="#">Terms of Use</a> & <a href="#">Privacy Policy</a>.
+                </label>
+                <button type="submit" class="register-button main-top">Register Now</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

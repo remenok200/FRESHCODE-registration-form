@@ -1,0 +1,100 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #F2F3F7;
+}
+
+a {
+    text-decoration: none;
+    color: green;
+}
+
+.wrapper-form {
+    /* намеренно задаю высоту жестко, 
+    хочу регистрационную форму сделать как в гугле - по центру экрана */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-label {
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 16px;
+}
+
+.main-text {
+    font-size: 20.5px;
+    margin: 22px 22px;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+
+    width: 40%;
+}
+
+.main-top {
+    margin-top: 20px;
+}
+
+.main-input-container {
+    display: inherit;
+    justify-content: space-between;
+}
+
+.main-input {
+    height: 65%;
+    border-radius: 5px;
+    padding: 15px;
+    border-color: gainsboro;
+}
+
+.register-button {
+    padding: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 5px;
+    background: #55AD56;
+    color: white;
+    border-color: #55AD56;
+}
+
+.main-label-container {
+    text-align: center;  /* выравнивание заголовка по центру обертки */
+    width: 80%;          /* ширина обертки. На самом деле для фиксированной верстки можно использовать и px, но лучше сразу адаптировать под разные устройства, т.к. это, что называется, тренди :-) */
+    margin: 0 auto;      /* выравнивание обертки по центру документа */
+    overflow: hidden;    /* прячем линии за границами обертки, чтобы в случае изменения ширины экрана */
+}
+
+.main-label-container .main-label {
+    position: relative;
+}
+
+.main-label-container .main-label::before {
+    content: '';                     /* позволяет вставлять генерируемое содержание в текст страницы, которое первоначально в тексте отсутствует */
+    display: block;                  /* делаем псевдоэлемент блоком для последующего работы с ним, как с простым div'ом */
+    width:190px;                    /* устанавливаем ширину линию. Можно использовать произвольную ширину */
+    position: absolute;              /* абсолютное позиционирование для управления линиями */
+    border-bottom: 2px solid #D0D1D5;   /* бордер псевдо дива, т.е. сама линия */
+    top:50%;                         /* позиционирование по вертикали */
+    right: 24%;                    /* позиционирование по горизонтали */
+}
+
+.main-label-container .main-label::after {
+    content: '';
+    display: block;
+    width: 190px;
+    position: absolute;
+    border-bottom: 2px solid #D0D1D5;
+    top:50%;
+    left: 24%;
+}
