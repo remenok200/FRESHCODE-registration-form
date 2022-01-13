@@ -9,4 +9,4 @@ Live Server
 ```
 
 GH Pages:
-https://remenok200.github.io/FRESHCODE-Flex-navigation/
+https://remenok200.github.io/FRESHCODE-registration-form/
