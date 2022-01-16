@@ -15,9 +15,7 @@ a {
 }
 
 .wrapper-form {
-    /* намеренно задаю высоту жестко, 
-    хочу регистрационную форму сделать как в гугле - по центру экрана */
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,7 +37,7 @@ a {
     display: flex;
     flex-direction: column;
 
-    width: 40%;
+    min-width: 40%;
 }
 
 .main-top {
@@ -48,10 +46,11 @@ a {
 
 .main-input-container {
     display: inherit;
-    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .main-input {
+    flex: 1;
     height: 65%;
     border-radius: 5px;
     padding: 15px;
@@ -69,30 +68,30 @@ a {
 }
 
 .main-label-container {
-    text-align: center;  /* выравнивание заголовка по центру обертки */
-    width: 80%;          /* ширина обертки. На самом деле для фиксированной верстки можно использовать и px, но лучше сразу адаптировать под разные устройства, т.к. это, что называется, тренди :-) */
-    margin: 0 auto;      /* выравнивание обертки по центру документа */
-    overflow: hidden;    /* прячем линии за границами обертки, чтобы в случае изменения ширины экрана */
+    text-align: center;  
+    width: 80%;          
+    margin: 0 auto;      
+    overflow: hidden;    
 }
 
-.main-label-container .main-label {
+.main-label {
     position: relative;
 }
 
-.main-label-container .main-label::before {
-    content: '';                     /* позволяет вставлять генерируемое содержание в текст страницы, которое первоначально в тексте отсутствует */
-    display: block;                  /* делаем псевдоэлемент блоком для последующего работы с ним, как с простым div'ом */
-    width:190px;                    /* устанавливаем ширину линию. Можно использовать произвольную ширину */
-    position: absolute;              /* абсолютное позиционирование для управления линиями */
-    border-bottom: 2px solid #D0D1D5;   /* бордер псевдо дива, т.е. сама линия */
-    top:50%;                         /* позиционирование по вертикали */
-    right: 24%;                    /* позиционирование по горизонтали */
+.main-label::before {
+    content: '';                     
+    display: block;                  
+    min-width: 17.5%;                   
+    position: absolute;              
+    border-bottom: 2px solid #D0D1D5;   
+    top:50%;                         
+    right: 24%;                    
 }
 
-.main-label-container .main-label::after {
+.main-label::after {
     content: '';
     display: block;
-    width: 190px;
+    min-width: 17.5%;
     position: absolute;
     border-bottom: 2px solid #D0D1D5;
     top:50%;
